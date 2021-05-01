@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+# nodejs familiar toolchain
+set -U default_npm_packages \
+    npmrc \
+    yarn \
+    lerna \
+    snowpack \
+    parcel \
+    typescript \
+    onchange \
+    http-server \
+    @ceejbot/tarot
+
+and npm i -g $default_npm_packages
