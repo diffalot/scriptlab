@@ -4,7 +4,7 @@
 set -e
 
 # install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+#git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "\nalias session=\"tmux new-session -A -s @\"" >> ~/.bashrc
 echo "\nalias session=\"tmux new-session -A -s @\"" >> ~/.zshrc
