@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# todo(alice) catch any that fail and provide a list at the end
+
+toolchain-tmux
+toolchain-vim
+toolchain-base16-shell
