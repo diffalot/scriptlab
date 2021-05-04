@@ -1,14 +1,12 @@
 #!/usr/bin/env fish
 
-# general utility functions
-
-	
-
-
-
-
 set name		"deploy"
 set job			"deploying"
+
+source ./_map
+# the map tells us where the scripts will live after they finish 
+# tr
+#
 
 set deployment_location "/home/alice/.bin/managed"
 set scripts_to_deploy "go-apt-upgrade" \
