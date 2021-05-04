@@ -1,0 +1,19 @@
+# this looks like a nice place to keep functions that will often be reused.
+
+# variable for export
+export i_am_at "work"
+
+this_is_me () {
+	# https://stackoverflow.com/questions/192319/how-do-i-know-the-script-file-name-in-a-bash-script/192337#192337
+	me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+	echo $me
+}
+
+
+
+check_root () {
+  if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root" 
+    exit 1
+  fi
+}
