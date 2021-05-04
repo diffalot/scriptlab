@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+# general utility functions
+
+	
+
+
+
+
+set name		"deploy"
+set job			"deploying"
+
+set deployment_location "/home/alice/.bin/managed"
+set scripts_to_deploy "go-apt-upgrade" \
+	 										"go-config-fish" \
+											"go-dev-zone"
+
+
