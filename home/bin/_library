@@ -1,0 +1,61 @@
+# this looks like a nice place to keep functions that will often be reused.
+
+function ask_with_a_no_default -a question yes_response no_response #question_color
+  if test -z $question
+    set question "[y/N]"
+  end
+  while true
+    #if test -n $question_color;
+    #  echo "A color that definitely exists is $question_color"
+    #  set available_colors (set_color --print-colors)
+    #  if contains $question_color $available_colors
+    #    echo "setting question color: $question_color"
+    #    set_color $question_color
+    #  else
+    #    set printable_colors (string join ', ' $available_colors)
+    #    echo "You must pick one of $printable_colors, or a hex color no larger than FFFFFF" 
+    #  end
+    #else
+    #  set_color normal
+    #end
+    read -l --prompt-str=$question answer
+    switch $answer
+      case Y y
+        if test -n $yes_response
+          echo $yes_response
+        end
+        return 0
+      case \*
+        if test -n $no_response
+          echo $no_response
+        end
+        return 1
+    end
+  end
+end
+
+# Examples
+#
+#echo "All Aruguments:"
+#ask_with_a_no_default "Do you like tacos? (y/N) " "Wow! So do I" "Well, I guess I'll eat all these myself"; and echo "The next command ran"
+#echo
+#echo "no no response, rude."
+#ask_with_a_no_default "Do you like tacos? (y/N) " "Wow! So do I"; and echo "The next command ran"
+#echo
+#echo "no yes Response, weird"
+#ask_with_a_no_default "Do you like tacos? (y/N) " "" "Wow! All For me"; and echo "The next command ran"
+#echo
+#echo "just a question:"
+#ask_with_a_no_default "Do you still like tacos? (y/N) "; and echo "The next command ran"
+#echo
+#echo "no question:"
+#ask_with_a_no_default; and echo "The next command ran" Examples
+#echo
+
+
+#function check_root () {
+#  if [[ $EUID -ne 0 ]]; then
+#    echo "This script must be run as root" 
+#    exit 1
+#  fi
+#}

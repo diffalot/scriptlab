@@ -1,0 +1,27 @@
+#!/usr/bin/env fish
+
+#set name		"deploy"
+#set job			"deploying"
+
+#source _map
+# the map tells us where the scripts will live after they finish 
+# tr
+#
+
+set deployment_location	 "/home/alice/bin/"
+#set scripts_to_deploy		 "go-apt-upgrade" \
+#	 												"go-config-fish" \
+#													"go-dev-zone"
+
+set active_directories  "canes" \
+	 											"shortcuts"
+
+mkdir -p $deployment_location
+ls -alh $deployment_location
+
+for dir in $active_directories
+	cp -r $dir/* $deployment_location/
+end
+
+cp _library $deployment_location
+ls -alh $deployment_location

@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+set echo "training, we don't have time for training today, we have to save the world!!!" \
+"ya the could a beat up a skinny litte gyi like evan eouldnodk ya!!!"
+
+echo PK
+
+set no $echo.length
+
+echo "$no things i wanna say brfoewwe get startes'nn"

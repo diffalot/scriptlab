@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+source _library
+
+echo "All Aruguments:"
+ask_with_a_no_default "Do you like tacos? (y/N) " "Wow! So do I" "Well, I guess I'll eat all these myself"; and echo "The next command ran"
+echo
+echo "no no response, rude."
+ask_with_a_no_default "Do you like tacos? (y/N) " "Wow! So do I"; and echo "The next command ran"
+echo
+echo "no yes Response, weird"
+ask_with_a_no_default "Do you like tacos? (y/N) " "" "Wow! All For me"; and echo "The next command ran"
+echo "just a question"
+ask_with_a_no_default "Do you still like tacos? (y/N) "; and echo "The next command ran"
+echo "no question"
+ask_with_a_no_default; and echo "The next command ran"
+
+

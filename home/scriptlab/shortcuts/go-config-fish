@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# exit when any command fails
+set -e
+
+vim ~/.config/fish/config.fish
+
+exec fish
+fundle install
