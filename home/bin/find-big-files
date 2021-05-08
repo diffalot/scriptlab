@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# exit when any command fails
-set -e
-
-du -a ~/ | sort -n -r | head -n 40
